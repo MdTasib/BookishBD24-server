@@ -14,8 +14,8 @@ module.exports = {
 				return callback(err);
 			}
 
-			dbConnection = db.db("beantik-task");
-			console.log("Successfully connected to MongoDB.");
+			dbConnection = db.db("bookishBD24");
+			console.log("Successfully connected to MongoDB");
 
 			return callback();
 		});
