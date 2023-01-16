@@ -3,9 +3,9 @@ const router = express.Router();
 const {
 	getProducts,
 	createProduct,
-} = require("../controllers/product.controller");
+} = require("../controllers/book.controller");
 
-router.get("/product", getProducts);
-router.post("/product", createProduct);
+router.get("/v1/books", getProducts);
+router.post("/v1/product", createProduct);
 
 module.exports = router;
