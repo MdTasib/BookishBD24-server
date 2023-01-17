@@ -2,13 +2,10 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 const port = process.env.PORT || 5000;
-const { connectToServer } = require("./utils/dbConnected");
-const errorHandler = require("./middlewares/errorHandler");
+const { connectToServer } = require("./version1/utils/dbConnected");
+const errorHandler = require("./version1/middlewares/errorHandler");
+const bookRoutes = require("./version1/routes/book.route");
 const app = express();
-const questionsRoute = require("./routes/questions.route");
-const slidersRoute = require("./routes/slider.route");
-const productRoute = require("./routes/product.route");
-const rateRoute = require("./routes/rate.route");
 
 // MIDDLEWARES
 app.use(cors());
@@ -16,10 +13,7 @@ app.use(express.json());
 app.use(errorHandler);
 
 // ROUTES
-app.use(questionsRoute);
-app.use(slidersRoute);
-app.use(productRoute);
-app.use(rateRoute);
+app.use(bookRoutes);
 
 // DATABASE CONNECTED
 connectToServer(err => {
