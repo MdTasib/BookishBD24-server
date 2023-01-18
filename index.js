@@ -4,7 +4,6 @@ require("dotenv").config();
 const port = process.env.PORT || 5000;
 const { connectToServer } = require("./version1/utils/dbConnected");
 const errorHandler = require("./version1/middlewares/errorHandler");
-const bookRoutes = require("./version1/routes/book.route");
 const app = express();
 
 // MIDDLEWARES
@@ -13,7 +12,6 @@ app.use(express.json());
 app.use(errorHandler);
 
 // ROUTES
-app.use(bookRoutes);
 
 // DATABASE CONNECTED
 connectToServer(err => {
