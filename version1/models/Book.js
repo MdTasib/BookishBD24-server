@@ -17,30 +17,30 @@ const bookSchema = mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		images: [
-			{
-				type: String,
-				required: true,
-				validate: {
-					validator: values => {
-						if (!Array.isArray(value)) {
-							return false;
-						}
+		// images: [
+		// 	{
+		// 		type: String,
+		// 		required: true,
+		// 		validate: {
+		// 			validator: values => {
+		// 				// if (!Array.isArray(value)) {
+		// 				// 	return false;
+		// 				// }
 
-						let isValid = true;
+		// 				let isValid = true;
 
-						values.forEach(url => {
-							if (!validator.isURL(url)) {
-								isValid = false;
-							}
-						});
+		// 				values.forEach(url => {
+		// 					if (!validator.isURL(url)) {
+		// 						isValid = false;
+		// 					}
+		// 				});
 
-						return isValid;
-					},
-					message: "Please provide a valid image urls",
-				},
-			},
-		],
+		// 				return isValid;
+		// 			},
+		// 			message: "Please provide a valid image urls",
+		// 		},
+		// 	},
+		// ],
 		category: {
 			type: String,
 			required: true,
