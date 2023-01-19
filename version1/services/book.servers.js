@@ -11,22 +11,21 @@ const getBookService = async (filters, queries) => {
 
 	const { skip, limit, fields, sortBy } = queries;
 
-	const products = await Product.find(filters)
+	const books = await Book.find(filters)
 		.skip(skip)
 		.limit(limit)
 		.select(fields)
 		.sort(sortBy);
 
-	const totalProducts = await Product.countDocuments(filters);
-	const pageCount = Math.ceil(totalProducts / limit);
+	const totalBooks = await Book.countDocuments(filters);
+	const pageCount = Math.ceil(totalBooks / limit);
 
-	return { totalProducts, pageCount, products };
+	return { totalBooks, pageCount, books };
 };
 
 const createBookService = async data => {
 	const book = await Book.create(data);
-
 	return book;
 };
 
-module.exports = { createBookService };
+module.exports = { createBookService, getBookService };
