@@ -1,6 +1,6 @@
 [
 	{
-		"category": ["বইমেলা"],
+		"category": "বইমেলা",
 		"image": "https://wafilife-media.wafilife.com/uploads/2022/12/%E0%A6%B8%E0%A6%82%E0%A6%B6%E0%A6%AF%E0%A6%BC-%E0%A6%A6%E0%A7%82%E0%A6%B0-%E0%A6%B9%E0%A7%8B%E0%A6%95-Font-JPG.jpg",
 		"images": [
 			"https://wafilife-media.wafilife.com/lookinside/cache/null%2f%e0%a6%b8%e0%a6%82%e0%a6%b6%e0%a7%9f+%e0%a6%a6%e0%a7%82%e0%a6%b0+%e0%a6%b9%e0%a7%8b%e0%a6%95%2f1.jpg?v=638092927836486604",
@@ -12,14 +12,7 @@
 			"https://wafilife-media.wafilife.com/lookinside/cache/null%2f%e0%a6%b8%e0%a6%82%e0%a6%b6%e0%a7%9f+%e0%a6%a6%e0%a7%82%e0%a6%b0+%e0%a6%b9%e0%a7%8b%e0%a6%95%2f14.jpg?v=638092931678541581"
 		],
 		"name": "সংশয় দূর হোক",
-		"author": [
-			{
-				"name": "মো.মিকাইল আহমেদ"
-			},
-			{
-				"img": "https://i.ibb.co/XLFWNRG/download-1.jpg"
-			}
-		],
+		"author": "মো.মিকাইল আহমেদ",
 		"publication": "দুর্বার পাবলিকেশন্স",
 		"subject": "ইসলামি আদর্শ ও মতবাদ",
 		"pages": 332,
@@ -29,10 +22,11 @@
 		"description": "আগ্রাসনমুখী পাশ্চাত্যের মুখে পৃথিবী যেমন হারিয়েছে তার নিজস্ব চোখ, তেমনি ইসলাম প্রসঙ্গে চৌদ্দশ বছর আগের যে চিত্র; দ্বিধা-সন্দেহ আর শতধা সংশয়কে একপাশে ফেলে রেখে রবের আশ্রয়ে নিজেকে সমর্পণ করে দিয়ে আবদিয়্যাতের যে মর্যাদাপূর্ণ অবস্থান, তাও কেমন ম্লান হয়ে যাচ্ছে। অথচ কুফর-শিরক এবং তাওহিদের মাঝামাঝি তো কোনো অবস্থান নেই। নেই ঈমানের প্রশ্নে সংশয়ের অবকাশ। এতদসত্ত্বেও বস্তুবাদী সভ্যতা চোখে দেখে বিশ্বাসের যে প্রবণতা মানুষের মননে সূক্ষ্মভাবে গেঁথে দিয়েছে, তাতে ইসলামের সামনে অবনত মস্তকে নিজেকে উৎসর্গ করে দেয়ার মৌলিক বিশ্বাসই কেবল বাধাগ্রস্ত হচ্ছেনা, দেখা দিচ্ছে ঈমানের প্রশ্নে মারাত্মক ঝুঁকি। তাই মুমিনের ঈমান রক্ষার চৈতন্য থেকে ‘সংশয় দূর হোক’ চেষ্টা করেছে ইসলামকে সর্বোৎকৃষ্ট প্রমাণের অন্তরায় এমন সব দ্বিধা-সন্দেহ এবং যাপিত সংশয়ের নিরসন। চেষ্টা করেছে আধুনিক বস্তুবাদী সভ্যতা ইসলামের গতিকে যে প্রক্রিয়ায় রোধ করতে চায়, তার প্রতিরোধ। ‘বিজ্ঞান কী বলে’ এ-ই যখন পৃথিবীর সব সত্য-অসত্যের মানদণ্ড, বিজ্ঞানের চোখ দিয়েই সে বুঝিয়ে দিয়েছে ইসলাম সর্বোত্তম, সর্বোৎকৃষ্ট এবং সুমহান৷",
 		"price": 525,
 		"discount": "25% ছাড়ে",
-		"prePrice": 700
+		"prePrice": 700,
+		"quentity": 10
 	},
 	{
-		"category": ["বইমেলা"],
+		"category": "বইমেলা",
 		"image": "https://wafilife-media.wafilife.com/uploads/2022/11/mukhush-01.jpg",
 		"images": [
 			"https://wafilife-media.wafilife.com/lookinside/cache/%e0%a6%ab%e0%a6%be%e0%a6%a4%e0%a6%bf%e0%a6%b9+%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%95%e0%a6%be%e0%a6%b6%e0%a6%a8%2f%e0%a6%ac%e0%a6%b8%e0%a7%8d%e0%a6%a4%e0%a7%81%e0%a6%ac%e0%a6%be%e0%a6%a6%e0%a7%87%e0%a6%b0+%e0%a6%ae%e0%a7%81%e0%a6%96%e0%a7%8b%e0%a6%b6+%e0%a6%89%e0%a6%a8%e0%a7%8d%e0%a6%ae%e0%a7%8b%e0%a6%9a%e0%a6%a8%2f1.jpg?v=638092978591534089",
@@ -64,7 +58,7 @@
 		"prePrice": 725
 	},
 	{
-		"category": ["বইমেলা"],
+		"category": "বইমেলা",
 		"image": "https://wafilife-media.wafilife.com/uploads/2022/11/%E0%A6%A4%E0%A6%BE%E0%A6%93%E0%A6%AC%E0%A6%BE-%E0%A6%93-%E0%A6%A4%E0%A6%BE%E0%A6%95%E0%A6%93%E0%A6%AF%E0%A6%BC%E0%A6%BE-cover-250x365.jpg",
 		"images": [
 			"https://wafilife-media.wafilife.com/lookinside/cache/%e0%a6%86%e0%a7%9f%e0%a6%be%e0%a6%a4+%e0%a6%aa%e0%a7%8d%e0%a6%b0%e0%a6%95%e0%a6%be%e0%a6%b6%e0%a6%a8%2f%e0%a6%a4%e0%a6%be%e0%a6%93%e0%a6%ac%e0%a6%be+%e0%a6%93+%e0%a6%a4%e0%a6%be%e0%a6%95%e0%a6%93%e0%a7%9f%e0%a6%be%2f1.jpg?v=638092989538847062",
@@ -96,7 +90,7 @@
 		"prePrice": 360
 	},
 	{
-		"category": ["বইমেলা"],
+		"category": "বইমেলা",
 		"image": "https://wafilife-media.wafilife.com/uploads/2021/03/je-valobasa-allahr-250x380.jpg",
 		"images": [
 			"https://wafilife-media.wafilife.com/uploads/2021/03/je-valobasa-allahr-250x380.jpg",
