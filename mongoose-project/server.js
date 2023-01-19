@@ -8,6 +8,7 @@ const app = require("./app");
 mongoose
 	.connect(process.env.DATABASE, {
 		useNewUrlParser: true,
+		useFindAndModify: false,
 		useUnifiedTopology: true,
 	})
 	.then(() => {
