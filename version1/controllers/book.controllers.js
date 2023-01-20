@@ -1,7 +1,7 @@
 const {
 	createBookService,
 	getBookService,
-} = require("../services/book.servers");
+} = require("../services/book.service");
 
 const getBooks = async (req, res, next) => {
 	try {
