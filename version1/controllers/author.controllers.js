@@ -1,9 +1,9 @@
 const {
-	createBookService,
-	getBookService,
-} = require("../services/book.service");
+	createAuthorService,
+	getAuthorService,
+} = require("../services/author.service");
 
-const getBooks = async (req, res, next) => {
+const getAuthors = async (req, res, next) => {
 	try {
 		// ALL RPODUCTS
 		// const products = await Product.find({});
@@ -63,11 +63,11 @@ const getBooks = async (req, res, next) => {
 			queries.limit = Number(limit);
 		}
 
-		const product = await getBookService(filters, queries);
+		const authors = await getAuthorService(filters, queries);
 
 		res.status(200).json({
 			status: "sussess",
-			data: product,
+			data: authors,
 		});
 	} catch (error) {
 		res.status(400).json({
@@ -78,9 +78,9 @@ const getBooks = async (req, res, next) => {
 	}
 };
 
-const createBook = async (req, res, next) => {
+const createAuthor = async (req, res, next) => {
 	try {
-		const result = await createBookService(req.body);
+		const result = await createAuthorService(req.body);
 
 		res.status(200).json({
 			status: "success",
@@ -96,7 +96,4 @@ const createBook = async (req, res, next) => {
 	}
 };
 
-module.exports = {
-	createBook,
-	getBooks,
-};
+module.exports = { createAuthor, getAuthors };
