@@ -1,7 +1,10 @@
 const express = require("express");
-const { createAuthor } = require("../controllers/author.controllers");
+const {
+	createAuthor,
+	getAuthors,
+} = require("../controllers/author.controllers");
 const router = express.Router();
 
-router.route("/").post(createAuthor);
+router.route("/").get(getAuthors).post(createAuthor);
 
 module.exports = router;
