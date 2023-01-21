@@ -1,6 +1,7 @@
 const {
 	createBookService,
 	getBookService,
+	updateBookByIdService,
 } = require("../services/book.service");
 
 const getBooks = async (req, res, next) => {
@@ -96,7 +97,27 @@ const createBook = async (req, res, next) => {
 	}
 };
 
+const updateBookById = async (req, res, next) => {
+	try {
+		const { id } = req.params;
+		const result = await updateBookByIdService(id, req.body);
+
+		res.status(200).json({
+			data: result,
+			status: "success",
+			message: "Updated successfully",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't update product",
+			error: error.message,
+		});
+	}
+};
+
 module.exports = {
 	createBook,
 	getBooks,
+	updateBookById,
 };
