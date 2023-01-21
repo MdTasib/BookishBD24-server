@@ -65,11 +65,11 @@ const getBooks = async (req, res, next) => {
 			queries.limit = Number(limit);
 		}
 
-		const product = await getBookService(filters, queries);
+		const book = await getBookService(filters, queries);
 
 		res.status(200).json({
 			status: "sussess",
-			data: product,
+			data: book,
 		});
 	} catch (error) {
 		res.status(400).json({
@@ -111,7 +111,7 @@ const updateBookById = async (req, res, next) => {
 	} catch (error) {
 		res.status(400).json({
 			status: "Failed",
-			message: "Couldn't update product",
+			message: "Couldn't update book",
 			error: error.message,
 		});
 	}

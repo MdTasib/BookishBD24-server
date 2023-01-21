@@ -1,6 +1,8 @@
 const {
 	createAuthorService,
 	getAuthorService,
+	updateAuthorByIdService,
+	deleteAuthorByIdService,
 } = require("../services/author.service");
 
 const getAuthors = async (req, res, next) => {
@@ -96,4 +98,53 @@ const createAuthor = async (req, res, next) => {
 	}
 };
 
-module.exports = { createAuthor, getAuthors };
+const updateAuthorById = async (req, res, next) => {
+	try {
+		const { id } = req.params;
+		const result = await updateAuthorByIdService(id, req.body);
+
+		res.status(200).json({
+			data: result,
+			status: "success",
+			message: "Updated successfully",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't update author",
+			error: error.message,
+		});
+	}
+};
+
+const deleteAuthorById = async (req, res, next) => {
+	try {
+		const { id } = req.params;
+		const result = await deleteAuthorByIdService(id);
+
+		if (!result.deletedCount) {
+			return res.status(400).json({
+				status: "Failed",
+				message: "Couldn't delete the author",
+			});
+		}
+
+		res.status(200).json({
+			status: "success",
+			message: "Delete successfully",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't delete book",
+			error: error.message,
+		});
+	}
+};
+
+module.exports = {
+	createAuthor,
+	getAuthors,
+	updateAuthorById,
+	deleteAuthorById,
+};

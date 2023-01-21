@@ -28,4 +28,21 @@ const createAuthorService = async data => {
 	return author;
 };
 
-module.exports = { createAuthorService, getAuthorService };
+const updateAuthorByIdService = async (id, data) => {
+	console.log(id, data);
+	const author = await Author.findOne({ _id: id });
+	const result = await author.set(data).save();
+	return result;
+};
+
+const deleteAuthorByIdService = async id => {
+	const result = await Author.deleteOne({ _id: id });
+	return result;
+};
+
+module.exports = {
+	createAuthorService,
+	getAuthorService,
+	updateAuthorByIdService,
+	deleteAuthorByIdService,
+};
