@@ -28,4 +28,21 @@ const createBookService = async data => {
 	return book;
 };
 
-module.exports = { createBookService, getBookService };
+const updateBookByIdService = async (id, data) => {
+	console.log(id, data);
+	const book = await Book.findOne({ _id: id });
+	const result = await book.set(data).save();
+	return result;
+};
+
+const deleteBookByIdService = async id => {
+	const result = await Book.deleteOne({ _id: id });
+	return result;
+};
+
+module.exports = {
+	createBookService,
+	getBookService,
+	updateBookByIdService,
+	deleteBookByIdService,
+};

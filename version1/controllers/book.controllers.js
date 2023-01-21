@@ -1,6 +1,8 @@
 const {
 	createBookService,
 	getBookService,
+	updateBookByIdService,
+	deleteBookByIdService,
 } = require("../services/book.service");
 
 const getBooks = async (req, res, next) => {
@@ -63,11 +65,11 @@ const getBooks = async (req, res, next) => {
 			queries.limit = Number(limit);
 		}
 
-		const product = await getBookService(filters, queries);
+		const book = await getBookService(filters, queries);
 
 		res.status(200).json({
 			status: "sussess",
-			data: product,
+			data: book,
 		});
 	} catch (error) {
 		res.status(400).json({
@@ -96,7 +98,53 @@ const createBook = async (req, res, next) => {
 	}
 };
 
+const updateBookById = async (req, res, next) => {
+	try {
+		const { id } = req.params;
+		const result = await updateBookByIdService(id, req.body);
+
+		res.status(200).json({
+			data: result,
+			status: "success",
+			message: "Updated successfully",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't update book",
+			error: error.message,
+		});
+	}
+};
+
+const deleteBookById = async (req, res, next) => {
+	try {
+		const { id } = req.params;
+		const result = await deleteBookByIdService(id);
+
+		if (!result.deletedCount) {
+			return res.status(400).json({
+				status: "Failed",
+				message: "Couldn't delete the book",
+			});
+		}
+
+		res.status(200).json({
+			status: "success",
+			message: "Delete successfully",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't delete book",
+			error: error.message,
+		});
+	}
+};
+
 module.exports = {
 	createBook,
 	getBooks,
+	updateBookById,
+	deleteBookById,
 };
