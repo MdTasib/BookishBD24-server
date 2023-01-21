@@ -35,8 +35,14 @@ const updateBookByIdService = async (id, data) => {
 	return result;
 };
 
+const deleteBookByIdService = async id => {
+	const result = await Book.deleteOne({ _id: id });
+	return result;
+};
+
 module.exports = {
 	createBookService,
 	getBookService,
 	updateBookByIdService,
+	deleteBookByIdService,
 };

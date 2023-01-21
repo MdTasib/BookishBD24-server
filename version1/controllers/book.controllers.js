@@ -2,6 +2,7 @@ const {
 	createBookService,
 	getBookService,
 	updateBookByIdService,
+	deleteBookByIdService,
 } = require("../services/book.service");
 
 const getBooks = async (req, res, next) => {
@@ -116,8 +117,34 @@ const updateBookById = async (req, res, next) => {
 	}
 };
 
+const deleteBookById = async (req, res, next) => {
+	try {
+		const { id } = req.params;
+		const result = await deleteBookByIdService(id);
+
+		if (!result.deletedCount) {
+			return res.status(400).json({
+				status: "Failed",
+				message: "Couldn't delete the book",
+			});
+		}
+
+		res.status(200).json({
+			status: "success",
+			message: "Delete successfully",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't delete book",
+			error: error.message,
+		});
+	}
+};
+
 module.exports = {
 	createBook,
 	getBooks,
 	updateBookById,
+	deleteBookById,
 };
