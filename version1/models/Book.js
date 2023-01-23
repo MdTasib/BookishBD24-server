@@ -19,6 +19,7 @@ const bookSchema = mongoose.Schema(
 		description: {
 			type: String,
 			required: true,
+			trim: true,
 		},
 		imageURL: {
 			type: String,
@@ -51,29 +52,30 @@ const bookSchema = mongoose.Schema(
 		category: {
 			type: String,
 			required: true,
+			trim: true,
 		},
 		author: {
 			type: String,
 			required: true,
+			trim: true,
 		},
 		authorEng: {
 			type: String,
 			required: true,
+			trim: true,
 		},
 		publication: {
 			type: String,
 			required: true,
+			trim: true,
 		},
 		subject: {
 			type: String,
 			required: true,
+			trim: true,
 		},
 		pages: {
 			type: Number,
-			required: true,
-		},
-		cover: {
-			type: String,
 			required: true,
 		},
 		cover: {
@@ -87,14 +89,17 @@ const bookSchema = mongoose.Schema(
 		language: {
 			type: String,
 			required: true,
+			trim: true,
 		},
 		price: {
 			type: Number,
 			required: true,
+			trim: true,
 		},
 		discount: {
 			type: Number,
 			required: true,
+			trim: true,
 		},
 		prePrice: {
 			type: Number,
@@ -103,6 +108,7 @@ const bookSchema = mongoose.Schema(
 		quentity: {
 			type: Number,
 			required: true,
+			trim: true,
 		},
 	},
 	{
