@@ -5,24 +5,6 @@ const {
 
 const getReviews = async (req, res, next) => {
 	try {
-		// ALL RPODUCTS
-		// const products = await Product.find({});
-
-		// GET A SINGLE PRODUCT BY ID
-		// const product = await Product.find({ name: "Dall" });
-
-		// FIND PRODUCT OR OPARETOR
-		// const product = await Product.find({
-		// 	$or: [{ _id: "6322b419107bef27c8460770" }, { price: 50 }],
-		// });
-
-		// FIND PRODUCT NOT EQUAL out-of-stock ($ne: "out-of-stock")
-		/**
-		 * Greater then / Greater then or equal - $gt / $gte
-		 * Less then / less then or equal - $lt / $lte
-		 * if name is Dall/Chal {name: {$in: ["Dall", "Chal"]}}
-		 */
-		//  const product = await getProductService();
 
 		// EXCLUDE FIELDS FROM QUERY STRING ( ADVANCED )
 		let filters = { ...req.query };
@@ -63,11 +45,11 @@ const getReviews = async (req, res, next) => {
 			queries.limit = Number(limit);
 		}
 
-		const reviews = await getReviewService(filters, queries);
+		const review = await getReviewService(filters, queries);
 
 		res.status(200).json({
-			status: "sussess",
-			data: authors,
+			status: "success",
+			data: review,
 		});
 	} catch (error) {
 		res.status(400).json({
