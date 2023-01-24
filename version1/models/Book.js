@@ -9,6 +9,13 @@ const bookSchema = mongoose.Schema(
 			minLenght: [2, "Name must be al last 3 characters"],
 			maxLenght: [100, "Name is too large"],
 		},
+		nameEng: {
+			type: String,
+			required: [true, "Please provide a name english for this book"],
+			trim: true,
+			minLenght: [2, "Name must be al last 3 characters"],
+			maxLenght: [100, "Name is too large"],
+		},
 		description: {
 			type: String,
 			required: true,
@@ -46,6 +53,10 @@ const bookSchema = mongoose.Schema(
 			required: true,
 		},
 		author: {
+			type: String,
+			required: true,
+		},
+		authorEng: {
 			type: String,
 			required: true,
 		},

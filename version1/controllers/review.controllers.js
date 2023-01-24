@@ -1,11 +1,9 @@
 const {
-	createBookService,
-	getBookService,
-	updateBookByIdService,
-	deleteBookByIdService,
-} = require("../services/book.service");
+	createReviewService,
+	getReviewService
+} =require("../services/review.service");
 
-const getBooks = async (req, res, next) => {
+const getReviews = async (req, res, next) => {
 	try {
 		// ALL RPODUCTS
 		// const products = await Product.find({});
@@ -65,11 +63,11 @@ const getBooks = async (req, res, next) => {
 			queries.limit = Number(limit);
 		}
 
-		const book = await getBookService(filters, queries);
+		const reviews = await getReviewService(filters, queries);
 
 		res.status(200).json({
 			status: "sussess",
-			data: book,
+			data: authors,
 		});
 	} catch (error) {
 		res.status(400).json({
@@ -80,71 +78,25 @@ const getBooks = async (req, res, next) => {
 	}
 };
 
-const createBook = async (req, res, next) => {
-	try {
-		const result = await createBookService(req.body);
+const createReview = async (req, res) => {
+    try {
+		const result = await createReviewService(req.body);
 
 		res.status(200).json({
 			status: "success",
-			message: "Data inserted successfully",
+			message: "review inserted successfully",
 			data: result,
 		});
 	} catch (error) {
 		res.status(400).json({
 			status: "Failed",
-			message: "Data is't inserted",
+			message: "review is't inserted",
 			error: error.message,
 		});
 	}
-};
-
-const updateBookById = async (req, res, next) => {
-	try {
-		const { id } = req.params;
-		const result = await updateBookByIdService(id, req.body);
-
-		res.status(200).json({
-			data: result,
-			status: "success",
-			message: "Updated successfully",
-		});
-	} catch (error) {
-		res.status(400).json({
-			status: "Failed",
-			message: "Couldn't update book",
-			error: error.message,
-		});
-	}
-};
-
-const deleteBookById = async (req, res, next) => {
-	try {
-		const { id } = req.params;
-		const result = await deleteBookByIdService(id);
-
-		if (!result.deletedCount) {
-			return res.status(400).json({
-				status: "Failed",
-				message: "Couldn't delete the book",
-			});
-		}
-
-		res.status(200).json({
-			status: "success",
-			message: "Delete successfully",
-		});
-	} catch (error) {
-		res.status(400).json({
-			status: "Failed",
-			message: "Couldn't delete book",
-			error: error.message,
-		});
-	}
-};
+  }
 
 module.exports = {
-	createBook,
-	getBooks,
-	updateBookById,
-	deleteBookById,
+	createReview,
+	getReviews
 };

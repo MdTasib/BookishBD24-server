@@ -1,11 +1,11 @@
 const {
-	createBookService,
-	getBookService,
-	updateBookByIdService,
-	deleteBookByIdService,
-} = require("../services/book.service");
+	createAuthorService,
+	getAuthorService,
+	updateAuthorByIdService,
+	deleteAuthorByIdService,
+} = require("../services/author.service");
 
-const getBooks = async (req, res, next) => {
+const getAuthors = async (req, res, next) => {
 	try {
 		// ALL RPODUCTS
 		// const products = await Product.find({});
@@ -65,11 +65,11 @@ const getBooks = async (req, res, next) => {
 			queries.limit = Number(limit);
 		}
 
-		const book = await getBookService(filters, queries);
+		const authors = await getAuthorService(filters, queries);
 
 		res.status(200).json({
 			status: "sussess",
-			data: book,
+			data: authors,
 		});
 	} catch (error) {
 		res.status(400).json({
@@ -80,9 +80,9 @@ const getBooks = async (req, res, next) => {
 	}
 };
 
-const createBook = async (req, res, next) => {
+const createAuthor = async (req, res, next) => {
 	try {
-		const result = await createBookService(req.body);
+		const result = await createAuthorService(req.body);
 
 		res.status(200).json({
 			status: "success",
@@ -98,10 +98,10 @@ const createBook = async (req, res, next) => {
 	}
 };
 
-const updateBookById = async (req, res, next) => {
+const updateAuthorById = async (req, res, next) => {
 	try {
 		const { id } = req.params;
-		const result = await updateBookByIdService(id, req.body);
+		const result = await updateAuthorByIdService(id, req.body);
 
 		res.status(200).json({
 			data: result,
@@ -111,21 +111,21 @@ const updateBookById = async (req, res, next) => {
 	} catch (error) {
 		res.status(400).json({
 			status: "Failed",
-			message: "Couldn't update book",
+			message: "Couldn't update author",
 			error: error.message,
 		});
 	}
 };
 
-const deleteBookById = async (req, res, next) => {
+const deleteAuthorById = async (req, res, next) => {
 	try {
 		const { id } = req.params;
-		const result = await deleteBookByIdService(id);
+		const result = await deleteAuthorByIdService(id);
 
 		if (!result.deletedCount) {
 			return res.status(400).json({
 				status: "Failed",
-				message: "Couldn't delete the book",
+				message: "Couldn't delete the author",
 			});
 		}
 
@@ -143,8 +143,8 @@ const deleteBookById = async (req, res, next) => {
 };
 
 module.exports = {
-	createBook,
-	getBooks,
-	updateBookById,
-	deleteBookById,
+	createAuthor,
+	getAuthors,
+	updateAuthorById,
+	deleteAuthorById,
 };
