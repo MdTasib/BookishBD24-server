@@ -23,6 +23,11 @@ const getBookService = async (filters, queries) => {
 	return { totalBooks, pageCount, books };
 };
 
+const getBookServiceById = async id => {
+	const book = await Book.findById({ _id: id });
+	return book;
+};
+
 const createBookService = async data => {
 	const book = await Book.create(data);
 	return book;
@@ -43,6 +48,7 @@ const deleteBookByIdService = async id => {
 module.exports = {
 	createBookService,
 	getBookService,
+	getBookServiceById,
 	updateBookByIdService,
 	deleteBookByIdService,
 };
