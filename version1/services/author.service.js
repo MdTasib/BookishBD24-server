@@ -23,6 +23,11 @@ const getAuthorService = async (filters, queries) => {
 	return { totalAuthor, pageCount, authors };
 };
 
+const getAuthorByIdService = async id => {
+	const author = await Author.findById({ _id: id });
+	return author;
+};
+
 const createAuthorService = async data => {
 	const author = await Author.create(data);
 	return author;
@@ -43,6 +48,7 @@ const deleteAuthorByIdService = async id => {
 module.exports = {
 	createAuthorService,
 	getAuthorService,
+	getAuthorByIdService,
 	updateAuthorByIdService,
 	deleteAuthorByIdService,
 };

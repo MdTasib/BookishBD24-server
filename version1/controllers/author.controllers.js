@@ -3,6 +3,7 @@ const {
 	getAuthorService,
 	updateAuthorByIdService,
 	deleteAuthorByIdService,
+	getAuthorByIdService,
 } = require("../services/author.service");
 
 const getAuthors = async (req, res, next) => {
@@ -80,6 +81,23 @@ const getAuthors = async (req, res, next) => {
 	}
 };
 
+const getAuthorById = async (req, res, next) => {
+	try {
+		const author = await getAuthorByIdService(req.params.id);
+
+		res.status(200).json({
+			status: "sussess",
+			data: author,
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Can't get data",
+			error: error.message,
+		});
+	}
+};
+
 const createAuthor = async (req, res, next) => {
 	try {
 		const result = await createAuthorService(req.body);
@@ -147,4 +165,5 @@ module.exports = {
 	getAuthors,
 	updateAuthorById,
 	deleteAuthorById,
+	getAuthorById,
 };

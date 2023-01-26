@@ -3,6 +3,7 @@ const {
 	getBookService,
 	updateBookByIdService,
 	deleteBookByIdService,
+	getBookServiceById,
 } = require("../services/book.service");
 
 const getBooks = async (req, res, next) => {
@@ -66,6 +67,23 @@ const getBooks = async (req, res, next) => {
 		}
 
 		const book = await getBookService(filters, queries);
+
+		res.status(200).json({
+			status: "sussess",
+			data: book,
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Can't get data",
+			error: error.message,
+		});
+	}
+};
+
+const getBookById = async (req, res, next) => {
+	try {
+		const book = await getBookServiceById(req.params.id);
 
 		res.status(200).json({
 			status: "sussess",
@@ -145,6 +163,7 @@ const deleteBookById = async (req, res, next) => {
 module.exports = {
 	createBook,
 	getBooks,
+	getBookById,
 	updateBookById,
 	deleteBookById,
 };
