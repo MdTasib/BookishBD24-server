@@ -1,0 +1,122 @@
+[
+	{
+		"brand": {
+			"name": "Pran",
+			"id": "63396ca45389523b14699aa3"
+		},
+		"imageURLS": [],
+		"_id": "633a67585789f311087e12ee",
+		"name": "pran chinigura aromatic rice - 5kg bag",
+		"description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+		"unit": "bag",
+		"category": "Rice",
+		"createdAt": "2022-10-03T04:38:48.424Z",
+		"updatedAt": "2022-10-03T04:38:48.424Z",
+		"__v": 0
+	},
+	{
+		"brand": {
+			"name": "Pran",
+			"id": "63396ca45389523b14699aa3"
+		},
+		"imageURLS": [],
+		"_id": "633a676d5789f311087e12f1",
+		"name": "pran chinigura aromatic rice - 50kg",
+		"description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+		"unit": "bag",
+		"category": "Rice",
+		"createdAt": "2022-10-03T04:39:09.471Z",
+		"updatedAt": "2022-10-03T04:39:09.471Z",
+		"__v": 0
+	},
+	{
+		"brand": {
+			"name": "Pran",
+			"id": "63396ca45389523b14699aa3"
+		},
+		"imageURLS": [],
+		"_id": "633a67785789f311087e12f4",
+		"name": "pran nazirshail rice - 5kg",
+		"description": "Pran Nazirshail Rice. Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+		"unit": "bag",
+		"category": "Rice",
+		"createdAt": "2022-10-03T04:39:20.245Z",
+		"updatedAt": "2022-10-03T04:39:20.245Z",
+		"__v": 0
+	},
+	{
+		"brand": {
+			"name": "Fresh",
+			"id": "6336b5d7c2ea1f00f0e45e4f"
+		},
+		"imageURLS": [],
+		"_id": "633a67ad5789f311087e12f9",
+		"name": "fresh chinigura rice",
+		"description": "Fresh Chinigura Rice. Fresh and Clean, Vacuum Packed. Fresh Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+		"unit": "kg",
+		"category": "Rice",
+		"createdAt": "2022-10-03T04:40:13.650Z",
+		"updatedAt": "2022-10-03T04:40:13.650Z",
+		"__v": 0
+	},
+	{
+		"brand": {
+			"name": "ACI",
+			"id": "6336b5ccc2ea1f00f0e45e4d"
+		},
+		"imageURLS": [],
+		"_id": "633a67b85789f311087e12fc",
+		"name": "aci pure miniket rice premium",
+		"description": "ACI Pure Miniket Rice Premium. Fresh and Clean, Vacuum Packed. ACI Pure Miniket Rice Premium can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
+		"unit": "kg",
+		"category": "Rice",
+		"createdAt": "2022-10-03T04:40:24.468Z",
+		"updatedAt": "2022-10-03T04:40:24.468Z",
+		"__v": 0
+	},
+	{
+		"brand": {
+			"name": "Fresh",
+			"id": "6336b5d7c2ea1f00f0e45e4f"
+		},
+		"imageURLS": [],
+		"_id": "633a67c25789f311087e12ff",
+		"name": "fresh fortified soyabean oil - 5ltr",
+		"description": "Fresh Fortified Soyabean Oil follows 3 steps of refining process-Perfect Degumming & Neutralization, Balanced De-colorization and Five steps Deodorization to ensure right ratio of Omega 3 & 6 and intact Beta-carotene in Soyabean Oil. Fresh soyabean oil contain vitamin A. Its fresh and healthy.",
+		"unit": "litre",
+		"category": "Oil",
+		"createdAt": "2022-10-03T04:40:34.482Z",
+		"updatedAt": "2022-10-03T04:40:34.482Z",
+		"__v": 0
+	},
+	{
+		"brand": {
+			"name": "Rupchanda",
+			"id": "6336b5dec2ea1f00f0e45e51"
+		},
+		"imageURLS": [],
+		"_id": "633a67cc5789f311087e1302",
+		"name": "rupchanda fortified soyabean oil - 5ltr",
+		"description": "First Vitamin A fortified Soyabean Oil. Increases immunity. Strengthens bone & teeth.",
+		"unit": "litre",
+		"category": "Oil",
+		"createdAt": "2022-10-03T04:40:44.656Z",
+		"updatedAt": "2022-10-03T04:40:44.656Z",
+		"__v": 0
+	},
+	{
+		"brand": {
+			"name": "Fresh",
+			"id": "6336b5d7c2ea1f00f0e45e4f"
+		},
+		"imageURLS": [],
+		"_id": "633a67d65789f311087e1305",
+		"name": "fresh refined sugar",
+		"description": "Fresh Refined sugar is a modern processes of without touching hand to protect the health of assurance. Fresh refined sugar is completely acid, fecal residues free and neat and clean, healthy, granulated sugar.",
+		"unit": "kg",
+		"category": "Sugar",
+		"createdAt": "2022-10-03T04:40:54.401Z",
+		"updatedAt": "2022-10-03T04:40:54.401Z",
+		"__v": 0
+	}
+]
