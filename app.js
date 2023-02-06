@@ -6,6 +6,7 @@ const app = express();
 const bookRoutes = require("./version1/routes/book.route");
 const authorRoutes = require("./version1/routes/author.route");
 const reviewRoutes = require("./version1/routes/review.route");
+const sliderRoutes = require("./version1/routes/slider.route");
 
 // MIDDLEWARES
 app.use(express.json());
@@ -15,6 +16,7 @@ app.use(cors());
 app.use("/api/v1/book", bookRoutes);
 app.use("/api/v1/author", authorRoutes);
 app.use("/api/v1/review", reviewRoutes);
+app.use("/api/v1/slider", sliderRoutes);
 
 app.get("/", (req, res) => {
 	res.send("Route is working! YaY!");
