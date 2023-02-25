@@ -2,6 +2,7 @@ const {
 	getOrderService,
 	createOrderService,
 	updateOrderStatusService,
+	paymentConfirmService,
 } = require("../services/placeOrder.service");
 
 // GET ALL ORDERS
@@ -136,8 +137,29 @@ const updateOrderStatus = async (req, res, next) => {
 	}
 };
 
+// UPDATE PURCAHCES PRODUCT STATUS
+const paymentConfirm = async (req, res, next) => {
+	try {
+		const { id } = req.params;
+		const result = await paymentConfirmService(id, req.body);
+
+		res.status(200).json({
+			data: result,
+			status: "success",
+			message: "Book order successfull",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't order book",
+			error: error.message,
+		});
+	}
+};
+
 module.exports = {
 	createOrder,
 	getOrders,
 	updateOrderStatus,
+	paymentConfirm,
 };

@@ -39,8 +39,15 @@ const updateOrderStatusService = async (id, data) => {
 	return result;
 };
 
+const paymentConfirmService = async (id, data) => {
+	const order = await Order.findOne({ _id: id });
+	const result = await order.set(data).save();
+	return result;
+};
+
 module.exports = {
 	createOrderService,
 	getOrderService,
 	updateOrderStatusService,
+	paymentConfirmService,
 };

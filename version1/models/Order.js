@@ -18,28 +18,10 @@ const orderSchema = mongoose.Schema(
 			required: true,
 			trim: true,
 		},
-		subject: {
-			type: String,
-			required: true,
-			trim: true,
-		},
-		pages: {
-			type: Number,
-			required: true,
-		},
 		price: {
 			type: Number,
 			required: true,
 			trim: true,
-		},
-		discount: {
-			type: Number,
-			required: true,
-			trim: true,
-		},
-		prePrice: {
-			type: Number,
-			required: true,
 		},
 		userEmail: {
 			type: String,
