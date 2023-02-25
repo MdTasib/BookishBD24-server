@@ -3,6 +3,7 @@ const {
 	createOrderService,
 	updateOrderStatusService,
 	paymentConfirmService,
+	paymentIntentService,
 } = require("../services/placeOrder.service");
 
 // GET ALL ORDERS
@@ -157,9 +158,42 @@ const paymentConfirm = async (req, res, next) => {
 	}
 };
 
+app.post("/create-payment-intent", async (req, res) => {
+	const service = req.body;
+	const price = service.price;
+	const amount = price * 100;
+	const paymentIntent = await stripe.paymentIntents.create({
+		amount: amount,
+		currency: "usd",
+		payment_method_types: ["card"],
+	});
+});
+
+// UPDATE PURCAHCES PRODUCT STATUS
+const paymentIntent = async (req, res, next) => {
+	try {
+		const data = req.body;
+		const price = data.price * 100;
+		const result = await paymentIntentService(price);
+
+		res.status(200).json({
+			data: result,
+			status: "success",
+			message: "Book order successfull",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't order book",
+			error: error.message,
+		});
+	}
+};
+
 module.exports = {
 	createOrder,
 	getOrders,
 	updateOrderStatus,
 	paymentConfirm,
+	paymentIntent,
 };

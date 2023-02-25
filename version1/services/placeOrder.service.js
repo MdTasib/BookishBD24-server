@@ -45,9 +45,20 @@ const paymentConfirmService = async (id, data) => {
 	return result;
 };
 
+const paymentIntentService = async price => {
+	const paymentIntent = await stripe.paymentIntents.create({
+		amount: price,
+		currency: "usd",
+		payment_method_types: ["card"],
+	});
+
+	return { clientSecret: paymentIntent.client_secret };
+};
+
 module.exports = {
 	createOrderService,
 	getOrderService,
 	updateOrderStatusService,
 	paymentConfirmService,
+	paymentIntentService,
 };
