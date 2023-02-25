@@ -1,8 +1,10 @@
 const {
 	getOrderService,
 	createOrderService,
+	updateOrderStatusService,
 } = require("../services/placeOrder.service");
 
+// GET ALL ORDERS
 const getOrders = async (req, res, next) => {
 	try {
 		// ALL RPODUCTS
@@ -95,6 +97,7 @@ const getOrders = async (req, res, next) => {
 // 	}
 // };
 
+// ORDER ON A BOOK (BUT DO NOT PURCHASE THE BOOK)
 const createOrder = async (req, res, next) => {
 	try {
 		const result = await createOrderService(req.body);
@@ -113,7 +116,28 @@ const createOrder = async (req, res, next) => {
 	}
 };
 
+// UPDATE PURCAHCES PRODUCT STATUS
+const updateOrderStatus = async (req, res, next) => {
+	try {
+		const { id } = req.params;
+		const result = await updateOrderStatusService(id, req.body);
+
+		res.status(200).json({
+			data: result,
+			status: "success",
+			message: "Updated status successfully",
+		});
+	} catch (error) {
+		res.status(400).json({
+			status: "Failed",
+			message: "Couldn't update status",
+			error: error.message,
+		});
+	}
+};
+
 module.exports = {
 	createOrder,
 	getOrders,
+	updateOrderStatus,
 };

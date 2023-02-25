@@ -34,7 +34,6 @@ const createBookService = async data => {
 };
 
 const updateBookByIdService = async (id, data) => {
-	console.log(id, data);
 	const book = await Book.findOne({ _id: id });
 	const result = await book.set(data).save();
 	return result;

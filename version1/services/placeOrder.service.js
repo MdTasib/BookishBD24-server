@@ -33,7 +33,14 @@ const createOrderService = async data => {
 	return order;
 };
 
+const updateOrderStatusService = async (id, data) => {
+	const order = await Order.findOne({ _id: id });
+	const result = await order.set(data).save();
+	return result;
+};
+
 module.exports = {
 	createOrderService,
 	getOrderService,
+	updateOrderStatusService,
 };
