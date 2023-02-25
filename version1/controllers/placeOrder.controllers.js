@@ -158,17 +158,6 @@ const paymentConfirm = async (req, res, next) => {
 	}
 };
 
-app.post("/create-payment-intent", async (req, res) => {
-	const service = req.body;
-	const price = service.price;
-	const amount = price * 100;
-	const paymentIntent = await stripe.paymentIntents.create({
-		amount: amount,
-		currency: "usd",
-		payment_method_types: ["card"],
-	});
-});
-
 // UPDATE PURCAHCES PRODUCT STATUS
 const paymentIntent = async (req, res, next) => {
 	try {
