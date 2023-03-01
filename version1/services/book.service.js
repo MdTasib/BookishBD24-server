@@ -29,6 +29,7 @@ const getBookServiceById = async id => {
 };
 
 const createBookService = async data => {
+	console.log("book data - ", data);
 	const book = await Book.create(data);
 	return book;
 };
