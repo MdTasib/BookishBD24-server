@@ -23,6 +23,10 @@ const orderSchema = mongoose.Schema(
 			required: true,
 			trim: true,
 		},
+		qty: {
+			type: Number,
+			required: true,
+		},
 		userEmail: {
 			type: String,
 			required: [true, "Please login with your email"],

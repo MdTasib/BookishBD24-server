@@ -29,6 +29,7 @@ const getOrderService = async (filters, queries) => {
 // };
 
 const createOrderService = async data => {
+	console.log("Data - ", data);
 	const order = await Order.create(data);
 	return order;
 };
