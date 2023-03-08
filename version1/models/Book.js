@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-
 const bookSchema = mongoose.Schema(
 	{
 		name: {
@@ -25,7 +24,7 @@ const bookSchema = mongoose.Schema(
 			type: String,
 			required: true,
 		},
-		// images: [
+		// imageURLS: [
 		// 	{
 		// 		type: String,
 		// 		required: true,
@@ -49,6 +48,7 @@ const bookSchema = mongoose.Schema(
 		// 		},
 		// 	},
 		// ],
+		imageURLS: [{ type: String, required: true }],
 		category: {
 			type: String,
 			required: true,
@@ -117,14 +117,14 @@ const bookSchema = mongoose.Schema(
 );
 
 // MONGOOSE MIDDLEWARES FOR SAVEING DATA: PRE / POST
-bookSchema.pre("save", function (next) {
-	console.log("Before product created".bgGreen);
+// bookSchema.pre("save", function (next) {
+// 	console.log("Before product created".bgGreen);
 
-	if (this.quantity === 0) {
-		this.status = "out-of-stock";
-	}
-	next();
-});
+// 	if (this.quantity === 0) {
+// 		this.status = "out-of-stock";
+// 	}
+// 	next();
+// });
 
 // MODEL
 const Book = mongoose.model("Book", bookSchema);
