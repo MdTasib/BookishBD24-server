@@ -7,6 +7,7 @@ const bookRoutes = require("./version1/routes/book.route");
 const authorRoutes = require("./version1/routes/author.route");
 const reviewRoutes = require("./version1/routes/review.route");
 const sliderRoutes = require("./version1/routes/slider.route");
+const userRoutes = require("./version1/routes/user.route");
 const orderRoutes = require("./version1/routes/placeOrder.route");
 // const {
 // 	paymentIntent,
@@ -21,6 +22,7 @@ app.use("/api/v1/book", bookRoutes);
 app.use("/api/v1/author", authorRoutes);
 app.use("/api/v1/review", reviewRoutes);
 app.use("/api/v1/slider", sliderRoutes);
+app.use("/api/v1/user", userRoutes);
 app.use("/api/v1/place-order", orderRoutes);
 // app.post("/create-payment-intent", paymentIntent);
 
