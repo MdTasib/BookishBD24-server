@@ -29,12 +29,12 @@ const getBookServiceById = async id => {
 };
 
 const createBookService = async data => {
+	console.log("book data - ", data);
 	const book = await Book.create(data);
 	return book;
 };
 
 const updateBookByIdService = async (id, data) => {
-	console.log(id, data);
 	const book = await Book.findOne({ _id: id });
 	const result = await book.set(data).save();
 	return result;
